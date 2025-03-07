@@ -9,7 +9,12 @@ https://learn.microsoft.com/es-es/dotnet/architecture/microservices/net-core-net
 
 https://github.com/dotnet/dotnet-docker
 
-
+```cs
+builder.WebHost.ConfigureKestrel(serverOption =>  {
+    serverOption.Listen(System.Net.IPAddress.Any, 8080);
+});
 ```
+
+```bash
 docker compose up -d
 ```
