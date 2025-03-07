@@ -1,0 +1,9 @@
+services:
+  application:
+    container_name: dotnet-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: dotnet-app
+    ports:
+      - 8000:8080
